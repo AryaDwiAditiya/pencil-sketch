@@ -9,7 +9,7 @@ def greyscale(rgb):
     return np.dot(rgb[...,:3],[0.299,0.587,0.114])
 
 def dodge(front,back):
-    result=front*255/(255-back)
+    result=front*230/(255-back)
     result[result>255]=255
     result[back==255]=255
     return result.astype('uint8')
